@@ -75,8 +75,12 @@ private:
 // 3. faites la fonction qui permet d'afficher un objet de type IntStack directement avec <<<
 //    std::cout << s1;
 //    il faut redéfinir l'operator<< en appelant la méthode print
+std::ostream &operator<<(std::ostream &os, const IntStack &pile)
+{
+    pile.print();
+    return os;
+}
 
-// Je n'ai pas compris ce qui est demandé. Cela correspond-il au programme main
 
 int main()
 {
