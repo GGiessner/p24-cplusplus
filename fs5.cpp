@@ -29,6 +29,11 @@ public:
     }
 };
 
+rational operator+ (const rational &r1, const rational &r2)
+{
+    return rational (r1.num* r2.denom+ r1.deom*r2.num, r1.denom*r2.denom)
+}
+
 int main()
 {
     rational r1;
