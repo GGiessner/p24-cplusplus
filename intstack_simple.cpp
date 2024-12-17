@@ -18,7 +18,7 @@ public:
         tab[top]=e;
         top= top+1;
     }
-    int get_top()
+    int get_top() const
     {
         // cette fonction retourne le dernier entier empilé
         return tab[top-1];
@@ -31,7 +31,7 @@ public:
         tab[top-1]=0;
         return a;
     }
-    bool is_empty()
+    bool is_empty() const
     {
         // cette fonction teste si la pile est vide
         if (top==0){
@@ -41,7 +41,7 @@ public:
             return false;
         }
     }
-    bool is_full()
+    bool is_full() const
     {
         // cette fonction teste si la pile est pleine
         if (top==SIZE){
@@ -51,16 +51,17 @@ public:
             return false;
         }
     }
-    void print()
+    void print() const
     {
         // cette fonction affiche la pile, par exemple
         // [1 2 3 [ pour dire que 3 entiers sont dans la pile
         // le dernier empilé est 3
         std::string ch= "[ " ;
         for (int i=0; i< top;i++){
-            ch= ch + "tab[i] ";
+            ch += std::to_string(tab[i]) + " ";
         }
-        ch= ch +"[";
+        ch += "]";
+        std::cout << ch << std::endl;
     }
 
 private:
@@ -75,6 +76,7 @@ private:
 // 3. faites la fonction qui permet d'afficher un objet de type IntStack directement avec <<<
 //    std::cout << s1;
 //    il faut redéfinir l'operator<< en appelant la méthode print
+
 std::ostream &operator<<(std::ostream &os, const IntStack &pile)
 {
     pile.print();
