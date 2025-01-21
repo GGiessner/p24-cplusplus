@@ -1,5 +1,5 @@
 #include <iostream>
-#include <vector>giy
+#include <vector>
 // Faire les fct area
 
 class Shape
