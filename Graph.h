@@ -5,6 +5,8 @@
 #include <queue>
 #include <string>
 
+# pragma once
+
 class Graph {
 private:
     std::unordered_map<std::string, std::vector<std::pair<std::string, double>>> adjList;
