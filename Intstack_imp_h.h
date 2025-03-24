@@ -1,5 +1,6 @@
 #include <iostream>
 #include <stdexcept>
+#pragma once
 
 class IntStack {
 private:
